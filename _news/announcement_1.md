@@ -31,9 +31,5 @@ bundle install
  * Copy .md files for blog posts from older jekyll blog to `_posts` 
  * Add project files to `_projects` directory (not yet done)
  
-
 * To deploy them and update your site: `./bin/deploy --user`
 
-
-
-{% endhighlight %} 
