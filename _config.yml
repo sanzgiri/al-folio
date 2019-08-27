@@ -2,6 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 name: Ashutosh Sanzgiri
+title: Ashutosh Sanzgiri
 email: sanzgiri@gmail.com
 description: > # this means to ignore newlines until "url:"
   Musings on Data Science and Machine Learning
