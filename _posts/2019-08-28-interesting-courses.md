@@ -15,4 +15,4 @@ excerpt: Courses to take
 
 ### Graph models
 * Graph Analytics for Big Data (Coursera, UC San Diego) <https://www.coursera.org/learn/big-data-graph-analytics>
-* Neo4J classes
+* Neo4J classes: <https://neo4j.com/graphacademy/online-training/>
