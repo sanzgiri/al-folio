@@ -12,6 +12,9 @@ excerpt: Numerai AWS
 * Code is installed on mac laptop in ~/example-numerai
 
 ```angular2
+Install python 3.x form www.python.org
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
 pip3 install -U numerai-cli
 
 # latest aws configs
