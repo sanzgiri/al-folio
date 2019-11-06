@@ -12,11 +12,10 @@ excerpt: Weekly Update, October 31, 2019
 * Bert Word Embeddings Tutorial: <https://mccormickml.com/2019/05/14/BERT-word-embeddings-tutorial/>
 * Swifter: <https://mccormickml.com/2019/05/14/BERT-word-embeddings-tutorial/> & <https://github.com/jmcarpenter2/swifter>
 * Cross-Validated fun facts:
- -  <https://stats.stackexchange.com/questions/352036/what-should-i-do-when-my-neural-network-doesnt-learn>
- - Top posts by score (score>400): <https://stats.stackexchange.com/search?q=score%3A400> 
- - Top posts by views (views>400000): <https://stats.stackexchange.com/search?q=views%3A400000>
-* Streamlit:
- - <https://towardsdatascience.com/coding-ml-tools-like-you-code-ml-models-ddba3357eace>
+    -  <https://stats.stackexchange.com/questions/352036/what-should-i-do-when-my-neural-network-doesnt-learn>
+    - Top posts by score (score>400): <https://stats.stackexchange.com/search?q=score%3A400> 
+    - Top posts by views (views>400000): <https://stats.stackexchange.com/search?q=views%3A400000>
+* Streamlit: <https://towardsdatascience.com/coding-ml-tools-like-you-code-ml-models-ddba3357eace>
 * Cron jobs in AWS: <https://medium.com/better-programming/cron-job-patterns-in-aws-126fbf54a276>
 * No surprise - Feather is the best format for data storage in pandas: <https://towardsdatascience.com/the-best-format-to-save-pandas-data-414dca023e0d>
 * Robo Advisors in Python: <https://towardsdatascience.com/python-for-finance-stock-portfolio-analyses-6da4c3e61054>
