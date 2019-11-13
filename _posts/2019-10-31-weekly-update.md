@@ -21,3 +21,6 @@ excerpt: Weekly Update, October 31, 2019
 * Robo Advisors in Python: <https://towardsdatascience.com/python-for-finance-stock-portfolio-analyses-6da4c3e61054>
 * Pandas Profiling package (One line EDA): <https://towardsdatascience.com/exploring-your-data-with-just-1-line-of-python-4b35ce21a82d>
 * Spleeter: Free Music Separation: <https://waxy.org/2019/11/fast-and-free-music-separation-with-deezers-machine-learning-library>
+* Jovian.ml <https://jovian-py.readthedocs.io/en/latest/>
+* Pachyderm (Hub Beta) <https://www.pachyderm.com/>
+* Francois Chollet - The Measure of Intelligence: <https://arxiv.org/pdf/1911.01547.pdf>
