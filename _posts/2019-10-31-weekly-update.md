@@ -10,7 +10,7 @@ excerpt: Weekly Update, October 31, 2019
 * Portland Area ML Resources: <https://github.com/jimtyhurst/ml-resources-Portland-OR-USA/blob/master/ml-resources-Portland-OR-USA.md>
 * Interpretable ML: <https://christophm.github.io/interpretable-ml-book/>
 * Bert Word Embeddings Tutorial: <https://mccormickml.com/2019/05/14/BERT-word-embeddings-tutorial/>
-* Swifter: <https://mccormickml.com/2019/05/14/BERT-word-embeddings-tutorial/> & <https://github.com/jmcarpenter2/swifter>
+* Swifter: <https://towardsdatascience.com/one-word-of-code-to-stop-using-pandas-so-slowly-793e0a81343c> & <https://github.com/jmcarpenter2/swifter>
 * Cross-Validated fun facts:
     -  <https://stats.stackexchange.com/questions/352036/what-should-i-do-when-my-neural-network-doesnt-learn>
     - Top posts by score (score>400): <https://stats.stackexchange.com/search?q=score%3A400> 
@@ -19,3 +19,5 @@ excerpt: Weekly Update, October 31, 2019
 * Cron jobs in AWS: <https://medium.com/better-programming/cron-job-patterns-in-aws-126fbf54a276>
 * No surprise - Feather is the best format for data storage in pandas: <https://towardsdatascience.com/the-best-format-to-save-pandas-data-414dca023e0d>
 * Robo Advisors in Python: <https://towardsdatascience.com/python-for-finance-stock-portfolio-analyses-6da4c3e61054>
+* Pandas Profiling package (One line EDA): <https://towardsdatascience.com/exploring-your-data-with-just-1-line-of-python-4b35ce21a82d>
+* Spleeter: Free Music Separation: <https://waxy.org/2019/11/fast-and-free-music-separation-with-deezers-machine-learning-library>
