@@ -24,3 +24,6 @@ excerpt: Weekly Update, October 31, 2019
 * Jovian.ml <https://jovian-py.readthedocs.io/en/latest/>
 * Pachyderm (Hub Beta) <https://www.pachyderm.com/>
 * Francois Chollet - The Measure of Intelligence: <https://arxiv.org/pdf/1911.01547.pdf>
+* LibFM <http://arogozhnikov.github.io/2016/02/15/TestingLibFM.html>
+    - FastFM tutorial: <http://ibayer.github.io/fastFM/index.html>
+* Home Assistant <https://www.home-assistant.io/>
