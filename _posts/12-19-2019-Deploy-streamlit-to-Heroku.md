@@ -1,9 +1,9 @@
 ---
-title: Deploy-Streamlit-to-Heroku, 2019-12-19
-date: 2019-12-19 00:00:00 Z
-permalink: "Deploy-streamlit-to-Heroku-2019-12-19"
+title: Deploy-Streamlit-to-Heroku
+date: 2019-12-20 00:00:00 Z
+permalink: "Deploy-streamlit-to-Heroku-2019-12-20"
 layout: post
-excerpt: Deploy-streamlit-to-Heroku, 2019-12-19
+excerpt: Deploy-streamlit-to-Heroku, 2019-12-20
 ---
 ### Deploy streamlit app to Heroku (on mac)
 ```
