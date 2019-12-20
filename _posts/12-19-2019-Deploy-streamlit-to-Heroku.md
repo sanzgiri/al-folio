@@ -1,7 +1,7 @@
 ---
-title: Deploy-Streamlit-to-Heroku
+title: Deploy Streamlit to Heroku
 date: 2019-12-20 00:00:00 Z
-permalink: "Deploy-streamlit-to-Heroku-2019-12-20"
+permalink: "/qDeploy-streamlit-to-Heroku-2019-12-20"
 layout: post
 excerpt: Deploy-streamlit-to-Heroku, 2019-12-20
 ---
