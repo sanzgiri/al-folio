@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Ashutosh Sanzgiri</title>
+  <title>Ashutosh Sanzgiri | Setting up a home server</title>
   <meta name="description" content="Musings on Data Science and Machine Learning
 ">
 
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/setting-up-home-server">
 </head>
 
 
@@ -104,56 +104,46 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Ashutosh Sanzgiri</h1>
-  <h2>Musings on Data Science and Machine Learning</h2>
-</div>
+        <div class="post">
 
+  <header class="post-header">
+    <h1 class="post-title">Setting up a home server</h1>
+    <p class="post-meta">December 7, 2018</p>
+  </header>
 
-<ul class="post-list">
-  
-    <li>
-      <h2><a class="post-title" href="/Projects-for-2020-2020-01-13">Projects for 2020</a></h2>
-      <p class="post-meta">January 13, 2020 — 13:35</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/moving-to-evernote-2020-01-10">moving to evernote</a></h2>
-      <p class="post-meta">January 9, 2020 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/Deploy-streamlit-to-Heroku-2019-12-20">Deploy Streamlit to Heroku</a></h2>
-      <p class="post-meta">December 19, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/weekly-update-112619">Weekly Update, November 26, 2019</a></h2>
-      <p class="post-meta">November 25, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
+  <article class="post-content">
+    <h3 id="using-ddns-to-set-up-remote-access-to-home-server">Using DDNS to set up remote access to home server</h3>
+
+<ul>
+  <li>Following instructions at <a href="https://www.howtogeek.com/66438/how-to-easily-access-your-home-network-from-anywhere-with-ddns/">https://www.howtogeek.com/66438/how-to-easily-access-your-home-network-from-anywhere-with-ddns/</a></li>
+  <li>I selected DYNU as the Dynamic DNS Service provider and created an account with them: <a href="https://www.dynu.com/en-US/">https://www.dynu.com/en-US/</a>. This is a free service and you can get a domain (I chose <code class="language-plaintext highlighter-rouge">sanzgiri.freeddns.org</code>) and IPv4 address</li>
+  <li>Remote SSH to your machine is as easy as</li>
 </ul>
 
+<p><code class="language-plaintext highlighter-rouge">ssh -A ashutosh@sanzgiri.freeddns.org</code></p>
 
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <a class="pagination-item" href="/blog/page2/">Older</a>
-    
-  </div>
-  <div class="pagination-meta">Page 1 of 8</div>
+<ul>
+  <li>You can remotely suspend your machine using</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">ssh -t ashutosh@sanzgiri.freeddns.org sudo systemctl suspend</code></p>
+
+<ul>
+  <li>You can remotely wake up your machine using</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">wakeonlan -p 4343 &lt;mac-address&gt;</code></p>
+
+<ul>
+  <li>Note that you need to enable wakeonlan on your motherboard in your BIOS setup. wakeonlan is a perl utility available from</li>
+</ul>
+<p><a href="https://github.com/jpoliv/wakeonlan/blob/master/wakeonlan">https://github.com/jpoliv/wakeonlan/blob/master/wakeonlan</a>. You can also the “Mocha WOL” app on iOS.</p>
+
+  </article>
+
+  
+
 </div>
-
-
 
       </div>
     </div>

@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Ashutosh Sanzgiri</title>
+  <title>Ashutosh Sanzgiri | Switching to al-folio jekyll theme</title>
   <meta name="description" content="Musings on Data Science and Machine Learning
 ">
 
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/news/announcement_1/">
 </head>
 
 
@@ -104,56 +104,53 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Ashutosh Sanzgiri</h1>
-  <h2>Musings on Data Science and Machine Learning</h2>
-</div>
+        <div class="post">
 
+  <header class="post-header">
+    <h1 class="post-title">Switching to al-folio jekyll theme</h1>
+    <p class="post-meta">August 18, 2019</p>
+  </header>
 
-<ul class="post-list">
-  
-    <li>
-      <h2><a class="post-title" href="/Projects-for-2020-2020-01-13">Projects for 2020</a></h2>
-      <p class="post-meta">January 13, 2020 — 13:35</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/moving-to-evernote-2020-01-10">moving to evernote</a></h2>
-      <p class="post-meta">January 9, 2020 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/Deploy-streamlit-to-Heroku-2019-12-20">Deploy Streamlit to Heroku</a></h2>
-      <p class="post-meta">December 19, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/weekly-update-112619">Weekly Update, November 26, 2019</a></h2>
-      <p class="post-meta">November 25, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
+  <article class="post-content">
+    <p>I came across a new Jekyll theme on one of the NeurIPS conference pages and thought it would be perfect for my blog.
+Here are some notes on how I switched to this theme.</p>
+
+<hr />
+
+<ul>
+  <li>Fork repo <a href="https://github.com/alshedivat/al-folio">https://github.com/alshedivat/al-folio</a></li>
+  <li>Rename the cloned repo to <code class="language-plaintext highlighter-rouge">sanzgiri.github.io</code></li>
+</ul>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"> 
+git clone https://github.com/sanzgiri/sanzgiri.github.io
+<span class="nb">cd </span>sanzgiri.github.io
+bundle <span class="nb">install</span></code></pre></figure>
+
+<ul>
+  <li>Make your changes.
+    <ul>
+      <li>Edit <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
+      <li>Edit <code class="language-plaintext highlighter-rouge">_pages/about.md</code></li>
+      <li>Copy profile picture to <code class="language-plaintext highlighter-rouge">assets\img\prof_pic.jpg</code></li>
+      <li>Generate bibtex for your publications from Google Scholar and paste in <code class="language-plaintext highlighter-rouge">_bibliography/papers.bib</code></li>
+      <li>Remove content from <code class="language-plaintext highlighter-rouge">_data/coauthors.yml</code></li>
+      <li>Edit news items (<code class="language-plaintext highlighter-rouge">announcement_N.md</code> files) in <code class="language-plaintext highlighter-rouge">_news</code></li>
+      <li>In <code class="language-plaintext highlighter-rouge">_pages</code>, replace <code class="language-plaintext highlighter-rouge">teaching.md</code> with <code class="language-plaintext highlighter-rouge">classes.md</code>. Add any online MOOCs / Safari Training / LinkedIn Learning classes here.</li>
+      <li>In <code class="language-plaintext highlighter-rouge">_pages</code>, create <code class="language-plaintext highlighter-rouge">conferences.md</code> and list conferences attended.</li>
+      <li>Copy .md files for blog posts from older jekyll blog to <code class="language-plaintext highlighter-rouge">_posts</code></li>
+      <li>Add project files to <code class="language-plaintext highlighter-rouge">_projects</code> directory (not yet done)</li>
+    </ul>
+  </li>
+  <li>To deploy them and update your site: <code class="language-plaintext highlighter-rouge">./bin/deploy --user</code></li>
 </ul>
 
 
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <a class="pagination-item" href="/blog/page2/">Older</a>
-    
-  </div>
-  <div class="pagination-meta">Page 1 of 8</div>
+  </article>
+
+  
+
 </div>
-
-
 
       </div>
     </div>

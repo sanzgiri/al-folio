@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Ashutosh Sanzgiri</title>
+  <title>Ashutosh Sanzgiri | Using Aws Cloud9 On Home Server</title>
   <meta name="description" content="Musings on Data Science and Machine Learning
 ">
 
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/using-AWS-Cloud9-on-home-server">
 </head>
 
 
@@ -104,56 +104,81 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Ashutosh Sanzgiri</h1>
-  <h2>Musings on Data Science and Machine Learning</h2>
-</div>
+        <div class="post">
 
+  <header class="post-header">
+    <h1 class="post-title">Using Aws Cloud9 On Home Server</h1>
+    <p class="post-meta">January 31, 2018</p>
+  </header>
 
-<ul class="post-list">
-  
-    <li>
-      <h2><a class="post-title" href="/Projects-for-2020-2020-01-13">Projects for 2020</a></h2>
-      <p class="post-meta">January 13, 2020 — 13:35</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/moving-to-evernote-2020-01-10">moving to evernote</a></h2>
-      <p class="post-meta">January 9, 2020 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/Deploy-streamlit-to-Heroku-2019-12-20">Deploy Streamlit to Heroku</a></h2>
-      <p class="post-meta">December 19, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/weekly-update-112619">Weekly Update, November 26, 2019</a></h2>
-      <p class="post-meta">November 25, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
+  <article class="post-content">
+    <h2 id="setting-up-aws-cloud-9-to-ssh-to-your-home-ubuntu-server">Setting up AWS Cloud 9 to ssh to your home Ubuntu server</h2>
+
+<h3 id="prepare-your-home-ubuntu-server">Prepare your home Ubuntu server</h3>
+
+<ul>
+  <li>
+    <p>Set up port forwarding on your home router. You want to forward tcp port 22. Ideally, you want to forward it to non-standard port (say, 2220). For now, to keep things simple (but perhaps insecure), I just forwarded it to 22. The process for doing this is router-specific. As part of doing this, you also have to reserve the IP address for your</p>
+  </li>
+  <li>Get the public ip address of your machine. There are several ways to do this:
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget <span class="nt">-qO-</span> http://ipecho.net/plain <span class="p">;</span> <span class="nb">echo
+</span>curl ipinfo.io/ip
+</code></pre></div>    </div>
+  </li>
+  <li>Install nodejs on your home server:
+    <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">-sL</span> https://deb.nodesource.com/setup_9.x | <span class="nb">sudo</span> <span class="nt">-E</span> bash -
+<span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> nodejs
+</code></pre></div>    </div>
+  </li>
+  <li>Set up permissions on your home directory:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo chmod u=rwx,g=rx,o=rx ~
+</code></pre></div>    </div>
+  </li>
+  <li>You need to have python v2.7 in your path (check how critical this requirement is and what happens if you have version v3.x instead)</li>
 </ul>
 
+<h3 id="setup-on-aws">Setup on AWS</h3>
 
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <a class="pagination-item" href="/blog/page2/">Older</a>
-    
-  </div>
-  <div class="pagination-meta">Page 1 of 8</div>
+<ul>
+  <li>
+    <p>Login to your AWS console at https://console.aws.amazon.com/cloud9/home?region=us-east-1 (or appropriate region)</p>
+  </li>
+  <li>
+    <p>Click “Create Environment”</p>
+  </li>
+  <li>
+    <p>Select “Connect and run in remote server (SSH)”</p>
+  </li>
+  <li>
+    <p>Enter your login name on your server under “User”</p>
+  </li>
+  <li>
+    <p>Enter your server’s public IP which you found above, under “Host”</p>
+  </li>
+  <li>
+    <p>Port is the port to which you forwarded port 22 of your server above.</p>
+  </li>
+  <li>
+    <p>Copy SSH key to your clipboard. Create or append the key to file .ssh/authorized_keys</p>
+  </li>
+  <li>Set permission on this file to 600
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chmod 600 .ssh/authorized_keys
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Skip “Advanced Settings” for now</p>
+  </li>
+  <li>
+    <p>Click “Next Step”. Here you will be able to review your settings and launch your development environment. You will be asked to confirm whether some tools can be installed on your server. Go ahead and accept.</p>
+  </li>
+  <li>Voila, in a few minutes, you will have an amazing IDE for remote development on your home server.</li>
+</ul>
+
+  </article>
+
+  
+
 </div>
-
-
 
       </div>
     </div>

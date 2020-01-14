@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Ashutosh Sanzgiri</title>
+  <title>Ashutosh Sanzgiri | Tensorflow in Swift</title>
   <meta name="description" content="Musings on Data Science and Machine Learning
 ">
 
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/tensorflow-swift">
 </head>
 
 
@@ -104,56 +104,40 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Ashutosh Sanzgiri</h1>
-  <h2>Musings on Data Science and Machine Learning</h2>
-</div>
+        <div class="post">
 
+  <header class="post-header">
+    <h1 class="post-title">Tensorflow in Swift</h1>
+    <p class="post-meta">May 19, 2019</p>
+  </header>
 
-<ul class="post-list">
-  
-    <li>
-      <h2><a class="post-title" href="/Projects-for-2020-2020-01-13">Projects for 2020</a></h2>
-      <p class="post-meta">January 13, 2020 — 13:35</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/moving-to-evernote-2020-01-10">moving to evernote</a></h2>
-      <p class="post-meta">January 9, 2020 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/Deploy-streamlit-to-Heroku-2019-12-20">Deploy Streamlit to Heroku</a></h2>
-      <p class="post-meta">December 19, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/weekly-update-112619">Weekly Update, November 26, 2019</a></h2>
-      <p class="post-meta">November 25, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
+  <article class="post-content">
+    <h3 id="using-swift-on-tensorflow">Using Swift on Tensorflow</h3>
+
+<ul>
+  <li>Lauching a Jupyter notebook for Swift
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/google/swift-jupyter.git
+cd swift-jupyter
+docker build -f docker/Dockerfile -t swift-jupyter .
+docker run -p 8888:8888 -it --cap-add SYS_PTRACE -v ~/swift-notebooks:/notebooks swift-jupyter
+</code></pre></div>    </div>
+  </li>
+  <li>Useful resources:
+    <ol>
+      <li>Swift for Tensorflow project on github: <a href="https://github.com/tensorflow/swift">https://github.com/tensorflow/swift</a></li>
+      <li>Swift kernels in Jupyter: <a href="https://github.com/google/swift-jupyter/#option-3-using-the-docker-container">https://github.com/google/swift-jupyter/#option-3-using-the-docker-container</a></li>
+      <li>Fast AI swift notebooks: <a href="https://github.com/fastai/fastai_docs/tree/master/dev_swift">https://github.com/fastai/fastai_docs/tree/master/dev_swift</a></li>
+      <li>Hacking with Swift: <a href="https://www.hackingwithswift.com">https://www.hackingwithswift.com</a></li>
+      <li>Swift for Tensorflow example: <a href="https://colab.research.google.com/github/tensorflow/swift/blob/master/docs/site/tutorials/model_training_walkthrough.ipynb">https://colab.research.google.com/github/tensorflow/swift/blob/master/docs/site/tutorials/model_training_walkthrough.ipynb</a></li>
+    </ol>
+  </li>
 </ul>
 
+  </article>
 
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <a class="pagination-item" href="/blog/page2/">Older</a>
-    
-  </div>
-  <div class="pagination-meta">Page 1 of 8</div>
+  
+
 </div>
-
-
 
       </div>
     </div>

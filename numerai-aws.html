@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Ashutosh Sanzgiri</title>
+  <title>Ashutosh Sanzgiri | Numerai Compute on AWS</title>
   <meta name="description" content="Musings on Data Science and Machine Learning
 ">
 
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/numerai-aws">
 </head>
 
 
@@ -104,56 +104,66 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Ashutosh Sanzgiri</h1>
-  <h2>Musings on Data Science and Machine Learning</h2>
-</div>
+        <div class="post">
 
+  <header class="post-header">
+    <h1 class="post-title">Numerai Compute on AWS</h1>
+    <p class="post-meta">July 13, 2019</p>
+  </header>
 
-<ul class="post-list">
-  
-    <li>
-      <h2><a class="post-title" href="/Projects-for-2020-2020-01-13">Projects for 2020</a></h2>
-      <p class="post-meta">January 13, 2020 — 13:35</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/moving-to-evernote-2020-01-10">moving to evernote</a></h2>
-      <p class="post-meta">January 9, 2020 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/Deploy-streamlit-to-Heroku-2019-12-20">Deploy Streamlit to Heroku</a></h2>
-      <p class="post-meta">December 19, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/weekly-update-112619">Weekly Update, November 26, 2019</a></h2>
-      <p class="post-meta">November 25, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
+  <article class="post-content">
+    <h3 id="train-numerai-models-and-submit-predictions-from-aws">Train Numerai models and submit predictions from AWS</h3>
+
+<ul>
+  <li>
+    <p>Use numerai-cli from https://github.com/numerai/numerai-cli</p>
+  </li>
+  <li>
+    <p>Code is installed on mac laptop in ~/example-numerai</p>
+  </li>
+</ul>
+
+<pre><code class="language-angular2">Install python 3.x form www.python.org
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+python get-pip.py
+pip3 install -U numerai-cli
+
+# latest aws configs
+numerai setup -c 2048 -m 16384
+
+# update example code
+numerai docker copy-example
+
+# build container, deploy on aws
+numerai docker deploy
+
+# Run locally and submit predictions
+numerai docker run
+
+# Test remote webhook
+numerai compute test-webhook
+numerai compute status
+numerai compute logs
+</code></pre>
+
+<ul>
+  <li>
+    <p>AWS job is scheduled to run daily at 15:35 UTC: <a href="https://console.aws.amazon.com/ecs/home?region=us-east-1#/clusters/numerai-submission-ecs-cluster/scheduledTasks/numerai-daily">https://console.aws.amazon.com/ecs/home?region=us-east-1#/clusters/numerai-submission-ecs-cluster/scheduledTasks/numerai-daily</a></p>
+  </li>
+  <li>
+    <p>Check AWS logs here: <a href="https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logStream:group=/fargate/service/numerai-submission;streamFilter=typeLogStreamPrefix">https://console.aws.amazon.com/cloudwatch/home?region=us-east-1#logStream:group=/fargate/service/numerai-submission;streamFilter=typeLogStreamPrefix</a></p>
+  </li>
+  <li>
+    <p>Link to forums: <a href="https://community.numer.ai/channel/compute?utm_source=sendgrid.com&amp;utm_medium=email&amp;utm_campaign=website">https://community.numer.ai/channel/compute?utm_source=sendgrid.com&amp;utm_medium=email&amp;utm_campaign=website</a></p>
+  </li>
 </ul>
 
 
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <a class="pagination-item" href="/blog/page2/">Older</a>
-    
-  </div>
-  <div class="pagination-meta">Page 1 of 8</div>
+  </article>
+
+  
+
 </div>
-
-
 
       </div>
     </div>

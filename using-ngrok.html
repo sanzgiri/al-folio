@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Ashutosh Sanzgiri</title>
+  <title>Ashutosh Sanzgiri | Using ngrok</title>
   <meta name="description" content="Musings on Data Science and Machine Learning
 ">
 
   <link rel="shortcut icon" href="/assets/img/favicon.ico">
 
   <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/using-ngrok">
 </head>
 
 
@@ -104,56 +104,48 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="header-bar">
-  <h1>Ashutosh Sanzgiri</h1>
-  <h2>Musings on Data Science and Machine Learning</h2>
+        <div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Using ngrok</h1>
+    <p class="post-meta">June 1, 2018</p>
+  </header>
+
+  <article class="post-content">
+    <h3 id="using-ngrok-for-remote-access-to-your-home-machine">Using ngrok for remote access to your home machine</h3>
+
+<p>ngrok (https://ngrok.com/) is a great way to connect to a web server (e.g jupyter notebook server) on your home machine or simply ssh into it.
+A basic account is free. When you register, you will get an authtoken. Use that to create a config file on your home machine:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ngrok authtoken &lt;YOUR-AUTH-TOKEN&gt;
+</code></pre></div></div>
+
+<p>This puts the authtoken in <code class="language-plaintext highlighter-rouge">~/.ngrok2/ngrok.yml</code>. Edit this file and add the following lines:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>tunnels:
+  http:
+    proto: http
+    addr: 8888
+  ssh:
+    proto: tcp
+    addr: 22
+</code></pre></div></div>
+
+<p>Next, start ngrok using:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ngrok start --all
+</code></pre></div></div>
+
+<p>Once you do this, you get a monitoring display that lists the forwarding addresses. At this point, you can point your browser to <code class="language-plaintext highlighter-rouge">https://&lt;your-address&gt;.ngrok.io</code> to connect
+to your Jupyter notebook.</p>
+
+<p>To ssh to your machine, you will have to use the syntax: <code class="language-plaintext highlighter-rouge">ssh &lt;user&gt;@0.tcp.ngrok.io -p &lt;xxxxx&gt;</code> where <code class="language-plaintext highlighter-rouge">p</code> is the forwarding port you see on the monitoring screen.</p>
+
+
+  </article>
+
+  
+
 </div>
-
-
-<ul class="post-list">
-  
-    <li>
-      <h2><a class="post-title" href="/Projects-for-2020-2020-01-13">Projects for 2020</a></h2>
-      <p class="post-meta">January 13, 2020 — 13:35</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/moving-to-evernote-2020-01-10">moving to evernote</a></h2>
-      <p class="post-meta">January 9, 2020 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/Deploy-streamlit-to-Heroku-2019-12-20">Deploy Streamlit to Heroku</a></h2>
-      <p class="post-meta">December 19, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
-    <li>
-      <h2><a class="post-title" href="/weekly-update-112619">Weekly Update, November 26, 2019</a></h2>
-      <p class="post-meta">November 25, 2019 — 16:00</p>
-      <p></p>
-    </li>
-  
-</ul>
-
-
-<div class="pagination clearfix mb1 mt4">
-  <div class="left">
-    
-      <span class="pagination-item disabled">Newer</span>
-    
-  </div>
-  <div class="right">
-    
-      <a class="pagination-item" href="/blog/page2/">Older</a>
-    
-  </div>
-  <div class="pagination-meta">Page 1 of 8</div>
-</div>
-
-
 
       </div>
     </div>
